@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 15%;
   background: red;
   align-items: center;
 `;
