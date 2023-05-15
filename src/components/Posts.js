@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import Bark from './Bark';
 
 const Container = styled.div`
   display: flex;
@@ -8,10 +9,15 @@ const Container = styled.div`
   background: yellow;
 `;
 
-const Posts = () => {
+const Posts = ({data}) => {
+
   return (
     <Container>
-
+      <ul>
+        {data.map((bark) => (
+          <Bark key={bark.id} bark={bark} />
+        ))}
+      </ul>
     </Container>
   )
 }
