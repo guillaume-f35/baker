@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
-  background: green;
+  border-left: 1px solid gray
 `;
 
 const Trends = () => {

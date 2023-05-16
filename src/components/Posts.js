@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 55%;
-  background: yellow;
+  border-left: 1px solid gray
 `;
 
 const Posts = ({data}) => {
