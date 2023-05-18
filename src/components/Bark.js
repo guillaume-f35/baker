@@ -6,12 +6,45 @@ const Li = styled.li`
 `;
 const ContainerBark = styled.div`
     display: flex;
+    border-radius: 5px;
+    margin-top: 10px;
+    
 `;
 
 const Img = styled.img`
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
+    margin-left: 3px
+`;
+
+const ContainerNew = styled.div`
+    padding: 5px;
+    font-family: ${props => props.theme.fontFamily};
+`;
+
+const Name = styled.span`
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+`;
+
+const AccountName = styled.span`
+    color: lightgray; 
+    font-size: 0.7rem;
+    margin-left: 10px;
+`;
+
+const Time = styled.span`
+    color: lightgray; 
+    font-size: 0.7rem;
+    margin-left: 10px;
+`;
+
+const Unit = styled.span`
+    color: lightgray; 
+    font-size: 0.7rem;
+    margin-left: 3px;
 `;
 
 const Bark = ({bark}) => {
@@ -19,11 +52,13 @@ const Bark = ({bark}) => {
     <Li>
        <ContainerBark>
         <Img src={bark.author.picture} alt='photo de profile'/>
-        <div>
-            <span>{bark.author.name}</span>
-            <span>{bark.author.accountName}</span>
+        <ContainerNew>
+            <Name>{bark.author.name}</Name>
+            <AccountName>{bark.author.accountName}</AccountName>
+            <Time>{bark.posted.time}</Time>
+            <Unit>{bark.posted.unit}</Unit>
             <p>{bark.content}</p>
-        </div>
+        </ContainerNew>
         </ContainerBark> 
     </Li> 
   )
