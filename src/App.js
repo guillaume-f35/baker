@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={themeApp}>
         <NavBar />
         <Posts data={data.barks}/>
-        <Trends />
+        <Trends data={data.trends}/>
       </ThemeProvider>
     </div>
   );
